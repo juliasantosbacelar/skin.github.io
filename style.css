@@ -711,6 +711,27 @@ body.dark-theme {
     color: #bbb;
 }
 
+.dark-theme .reviews-grid {
+    background: #1d1d1d;
+}
+
+.dark-theme .review-card {
+    background: #292929;
+    color: #f5f5f5;
+}
+
+.dark-theme .review-author span {
+    color: #bbb;
+}
+
+.dark-theme .site-footer {
+    background: #000;
+}
+
+.dark-theme .footer-column li {
+    color: #ccc;
+}
+
 .dark-theme .brand-logo {
     filter: invert(1);
 }
