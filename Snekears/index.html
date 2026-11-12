@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sniks</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="utility-bar">
+            <nav class="utility-links" aria-label="Links de atendimento">
+                <a href="#acessibilidade">Acessibilidade</a>
+                <a href="#acompanhar-pedido">Acompanhe o seu pedido</a>
+                <a href="#entrar">Entrar</a>
+            </nav>
+        </div>
+
+        <div class="main-bar">
+            <a class="brand" href="#" aria-label="Sniks - página inicial">
+                <img class="brand-logo" src="assets/sniks-logo.png" alt="Sniks">
+            </a>
+
+            <nav class="primary-navigation" id="primary-navigation" aria-label="Categorias">
+                <a href="#masculino">Masculino</a>
+                <a href="#feminino">Feminino</a>
+                <a href="#infantil">Infantil</a>
+                <a href="#lancamentos">Lançamentos</a>
+                <a class="sale-link" href="#black-friday">Black Friday</a>
+            </nav>
+
+            <!--/*nav bar*/-->
+            <div class="nav-actions">
+                <form class="search-form" role="search" action="#buscar">
+                    <label class="visually-hidden" for="site-search">Buscar produtos</label>
+                    <input id="site-search" name="q" type="search" placeholder="Buscar">
+                    <button class="icon-button search-button" type="button" aria-label="Abrir busca" aria-expanded="false">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                            <path d="m16 16 5 5"></path>
+                        </svg>
+                        <span class="search-label">Buscar</span>
+                    </button>
+                </form>
+
+                <a class="icon-button wishlist-link" href="#favoritos" aria-label="Favoritos">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.8 8.8c0 5.2-8.8 11-8.8 11s-8.8-5.8-8.8-11a4.8 4.8 0 0 1 8.8-2.6 4.8 4.8 0 0 1 8.8 2.6Z"></path>
+                    </svg>
+                </a>
+
+                <a class="icon-button account-link" href="#entrar" aria-label="Entrar na sua conta">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="8" r="3.5"></circle>
+                        <path d="M5 20a7 7 0 0 1 14 0"></path>
+                    </svg>
+                </a>
+
+                <button class="theme-toggle" type="button" aria-label="Ativar tema escuro" aria-pressed="false">
+                    <span class="theme-sun" aria-hidden="true">☼</span>
+                    <span class="theme-moon" aria-hidden="true">☾</span>
+                </button>
+
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                    <span class="menu-toggle-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Abrir menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!--/*Hero*/-->
+        <section class="hero" aria-label="Destaques da coleção">
+            <div class="hero-item">
+                <img src="assets/hero-sneakers-01.png" alt="Modelo usando sneakers em uma pose de dança">
+                <span class="hero-label">Masculino</span>
+            </div>
+            <div class="hero-item">
+                <img src="assets/hero-sneakers-02.png" alt="Modelo apresentando sneakers coloridos">
+                <span class="hero-label">Feminino</span>
+            </div>
+            <div class="hero-item">
+                <img src="assets/hero-sneakers-03.png" alt="Modelo usando sneakers em uma pose urbana">
+                <span class="hero-label">Infantil</span>
+            </div>
+        </section>
+
+       
+
+        <!--/*Sobre Nós*/-->
+        <section class="about-section" id="sobre-nos" aria-labelledby="about-title">
+            <h1 id="about-title">Sobre nós</h1>
+            <div class="about-content">
+                <img
+                    class="about-image"
+                    src="assets/about-sneakers.png"
+                    alt="Modelo em uma pose urbana usando sneakers cinza"
+                    loading="lazy"
+                >
+                <p>
+                    Na Sneakers, acreditamos que cada passo é uma oportunidade de expressar seu estilo.
+                    Somos uma loja apaixonada pelo universo dos sneakers, que une conforto, qualidade e
+                    autenticidade para acompanhar você em todos os momentos. Do streetwear ao casual,
+                    selecionamos modelos que combinam com diferentes estilos e personalidades. Mais do
+                    que vender tênis, queremos fazer parte da sua caminhada, oferecendo uma experiência
+                    de compra prática, produtos de qualidade e tendências que nunca saem de moda.
+                </p>
+            </div>
+        </section>
+
+        <!--/*Produtos em Destaque*/-->
+        <section class="products-section" id="destaques" aria-labelledby="products-title">
+            <div class="products-heading">
+                <h1 id="products-title">Nossos destaques</h1>
+                <div class="carousel-controls" aria-label="Controles do carrossel">
+                    <button class="carousel-button carousel-previous" type="button" aria-label="Produtos anteriores" disabled>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m15 18-6-6 6-6"></path>
+                        </svg>
+                    </button>
+                    <button class="carousel-button carousel-next" type="button" aria-label="Próximos produtos" disabled>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!--Carrossel de Produtos-->
+            <div class="product-carousel" aria-label="Produtos em destaque">
+                <article class="product-card">
+                    <img src="assets/product-grand-court.png" alt="Tênis Adidas Grand Court Alpha rosa" loading="lazy">
+                    <div class="product-details">
+                        <h3>Tênis Grand Court Alpha</h3>
+                        <p>Tênis estiloso com amortecimento Cloudfoam para o conforto diário.</p>
+                        <span class="product-price">R$ 599,99</span>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="assets/product-new-balance.png" alt="Tênis New Balance 480 Low branco e roxo" loading="lazy">
+                    <div class="product-details">
+                        <h3>Tênis New Balance 480 Low Unisex</h3>
+                        <p>Tênis estiloso com amortecimento Cloudfoam para o conforto diário.</p>
+                        <span class="product-price">R$ 399,99</span>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="assets/product-air-max.png" alt="Tênis Nike Air Max Portal preto" loading="lazy">
+                    <div class="product-details">
+                        <h3>Tênis Nike Air Max Portal Feminino</h3>
+                        <p>O Portal é a combinação perfeita de robustez e elegância.</p>
+                        <span class="product-price">R$ 669,99</span>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="assets/product-air-max.png" alt="Tênis Nike Air Max Portal preto" loading="lazy">
+                    <div class="product-details">
+                        <h3>Tênis Nike Air Max Portal Feminino</h3>
+                        <p>O Portal é a combinação perfeita de robustez e elegância.</p>
+                        <span class="product-price">R$ 669,99</span>
+                    </div>
+                </article>
+                 <article class="product-card">
+                    <img src="assets/product-grand-court.png" alt="Tênis Adidas Grand Court Alpha rosa" loading="lazy">
+                    <div class="product-details">
+                        <h3>Tênis Grand Court Alpha</h3>
+                        <p>Tênis estiloso com amortecimento Cloudfoam para o conforto diário.</p>
+                        <span class="product-price">R$ 599,99</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!--/*Lançamentos*/-->
+        <section class="launches-section" id="lancamentos" aria-labelledby="launches-title">
+            <h1 id="launches-title">Lançamentos</h1>
+            <div class="launches-gallery">
+                <a class="launch-card-link" href="lancamento-puma.html" aria-label="Ver lançamento Puma Rosie">
+                    <img
+                        src="assets/launch-puma-rosie.png"
+                        alt="Coleção Puma Rosie em tons de vinho e marrom"
+                        loading="lazy"
+                    >
+                </a>
+                <a class="launch-card-link" href="lancamento-adidas.html" aria-label="Ver lançamento Adidas Originals">
+                    <img
+                        src="assets/launch-adidas-originals.png"
+                        alt="Tênis Adidas Originals marrom com detalhes verdes"
+                        loading="lazy"
+                    >
+                </a>
+            </div>
+        </section>
+        
+        <!-- categorias -->
+         <section class="sport-categories" aria-label="Categorias por modalidade">
+             <article class="sport-card sport-card--running" id="corrida">
+                 <a class="sport-button" href="#corrida">Corrida</a>
+            </article>
+             <article class="sport-card sport-card--tennis" id="tenis">
+                 <a class="sport-button" href="#tenis">Tênis</a>
+            </article>
+             <article class="sport-card sport-card--basketball" id="basquete">
+                 <a class="sport-button" href="#basquete">Basquete</a>
+            </article>
+        </section>
+
+
+        <!--Avaliações-->
+        <section class="reviews-section" aria-labelledby="reviews-title">
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <p class="review-text">“Um site incrível!”</p>
+                    <div class="review-author">
+                        <div class="avatar avatar-one" aria-hidden="true"></div>
+                        <div>
+                            <strong>Cláudio Nunes</strong>
+                            <span>Cliente VIP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <p class="review-text">“Uma página muito acessível”</p>
+                    <div class="review-author">
+                        <div class="avatar avatar-two" aria-hidden="true"></div>
+                        <div>
+                            <strong>Juliana Linhares</strong>
+                            <span>Cliente VIP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <p class="review-text">“Entrega super rápida”</p>
+                    <div class="review-author">
+                        <div class="avatar avatar-three" aria-hidden="true"></div>
+                        <div>
+                            <strong>Analice Teixeira da Mata</strong>
+                            <span>Cliente VIP</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="brand-lockup" aria-label="Sneakers logo">
+                    <img class="brand-logo footer-logo" src="assets/sniks-logo.png" alt="Sniks">
+                </div>
+
+                <div class="social-links" aria-label="Redes sociais">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="X">x</a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Produtos mais vendidos</h3>
+                <ul>
+                    <li>Calçados</li>
+                    <li>Roupas</li>
+                    <li>Acessórios</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Categorias</h3>
+                <ul>
+                    <li>Masculino</li>
+                    <li>Feminino</li>
+                    <li>Infantil</li>
+                    <li>Promoções</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Outras</h3>
+                <ul>
+                    <li>Ajuda e suporte</li>
+                    <li>Fale conosco</li>
+                    <li>Entre em contato</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
